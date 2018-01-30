@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssl_menu>
+	<sys name = "default" text = "Параметры по умолчанию(если не заданы в настроке системмы)">
+		<user>DOCHIEVID</user> 
+	</sys>		
+	<sys name = "AED_100" text = "Разработка">	
+		<sysname>AED</sysname> 
+		<client>110</client> 
+		<user>DOCHIEVID</user> 
+		<pw>jd9_dd0880aFD</pw> 
+	</sys>		
+</ssl_menu>

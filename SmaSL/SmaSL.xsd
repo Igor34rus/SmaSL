@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:element name="ssl" type="sslType"/>
+  <xs:complexType name="settingsType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="pas"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sysType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="sysname"/>
+      <xs:element type="xs:byte" name="client"/>
+      <xs:element type="xs:string" name="user"/>
+      <xs:element type="xs:string" name="pw"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name"/>
+    <xs:attribute type="xs:string" name="text"/>
+  </xs:complexType>
+  <xs:complexType name="ssl_menuType">
+    <xs:sequence>
+      <xs:element type="sysType" name="sys"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sslType">
+    <xs:sequence>
+      <xs:element type="settingsType" name="settings"/>
+      <xs:element type="ssl_menuType" name="ssl_menu"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
