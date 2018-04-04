@@ -21,7 +21,7 @@ import data.data_setting;
 /*------------------------------------------------*/
 public class CL_SmaSL {
 	/*
-	 * 1 name = "AED_100" 
+	 * 1 name = "AED_100" test fghfhgfg
 	 * 2 text = "����������">
 	 * 3 <sysname>AED</sysname> 
 	 * 4 <client>110</client> 
@@ -39,6 +39,7 @@ public class CL_SmaSL {
 	// �������)
 	public ArrayList<data_line> data_tm = new ArrayList<data_line>();
 	public data_setting setting = new data_setting();
+	private String zz;
 	/*---------------------------------------------------------------*/
 	public CL_SmaSL( ) {
 		
@@ -136,14 +137,20 @@ public class CL_SmaSL {
 		}
 	}
 
+	@SuppressWarnings("unused")
 	private void GetAllSys_INI() {
 		int lv_sys_all = 0;
 		int lv_sys_curr = 0;
 		int zc = 0;
-
+		
+		zz = System.getenv("SAPLOGON_INI_FILE");
+		
 		File file = new File(System.getenv("SAPLOGON_INI_FILE"));
 		if (file == null) {
 			file = new File(System.getenv("APPDATA") + "/SAP/Common/saplogon.ini");
+		}
+		if (file == null) {
+			return;
 		}
 		Scanner input;
 		// *----------------------------
