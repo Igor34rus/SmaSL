@@ -144,7 +144,9 @@ public class CL_SmaSL {
 		int zc = 0;
 		
 		zz = System.getenv("SAPLOGON_INI_FILE");
-		
+		if ( zz == null) {
+			return;
+		}
 		File file = new File(System.getenv("SAPLOGON_INI_FILE"));
 		if (file == null) {
 			file = new File(System.getenv("APPDATA") + "/SAP/Common/saplogon.ini");
